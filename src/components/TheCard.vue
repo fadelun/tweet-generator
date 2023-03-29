@@ -2,7 +2,6 @@
   <div class="card bg-white w-[450px] h-[220px] border border-black p-6">
     <div class="card-profile bg-blue-300 w-full flex items-center gap-x-2">
       <ProfileImage />
-
       <UserName />
     </div>
     <div class="card-content bg-green-300">

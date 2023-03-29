@@ -5,8 +5,8 @@ import TheCard from "./components/TheCard.vue";
 import { reactive, provide } from "vue";
 
 const user = reactive({
-  name: "nama",
-  username: "username",
+  name: "",
+  username: "",
   tweet: "",
   image: "",
 });

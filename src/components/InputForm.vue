@@ -6,13 +6,23 @@
     </div>
     <div class="input-section mb-4 flex flex-col">
       <label for="name-input">Account name and username:</label>
-      <input type="text" name="account-name" />
-      <input type="text" name="username" />
+      <input type="text" name="account-name" v-model="user.name" />
+      <input type="text" name="username" v-model="user.username" />
     </div>
     <div class="input-section flex flex-col">
       <label for="tweet">write your quote:</label>
-      <textarea name="tweet" id="tweet" cols="40" rows="4"></textarea>
+      <textarea
+        v-model="user.tweet"
+        name="tweet"
+        id="tweet"
+        cols="40"
+        rows="4"
+      ></textarea>
     </div>
   </form>
 </template>
-<script setup></script>
+<script setup>
+import { inject } from "vue";
+
+const user = inject("user");
+</script>
