@@ -1,6 +1,8 @@
-<template lang="">
-  <div>
-    <h2 class="text-2xl font-semibold">Profile image</h2>
-  </div>
+<template>
+  <img
+    class="block mx-auto w-12 h-12 rounded-full sm:mx-0 sm:shrink-0"
+    src="https://fakeimg.pl/300/"
+    alt="user image"
+  />
 </template>
-<script></script>
+<script setup></script>
