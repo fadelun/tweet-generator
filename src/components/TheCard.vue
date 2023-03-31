@@ -1,10 +1,10 @@
 <template>
-  <div class="card bg-white w-[450px] h-[220px] border border-black p-6">
-    <div class="card-profile bg-blue-300 w-full flex items-center gap-x-2">
+  <div class="card bg-white w-[450px] min-h-[240px] border p-6 rounded-2xl">
+    <div class="card-profile w-full flex items-center gap-x-2 mb-4">
       <ProfileImage />
       <UserName />
     </div>
-    <div class="card-content bg-green-300">
+    <div class="card-content">
       <TheQuote />
       <TheDate />
     </div>

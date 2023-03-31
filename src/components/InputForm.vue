@@ -1,5 +1,7 @@
 <template>
-  <form class="bg-green-200 w-[300] border-black border-2 mt-20 p-5">
+  <form
+    class="absolute b-0 bg-green-200 w-[300] border-black border-2 mt-20 p-5"
+  >
     <div class="input-section mb-4 flex flex-col">
       <label for="uplaod-image">Upload image:</label>
       <input type="file" id="uplaod-image" accept="image/jpg, image/png" />
@@ -16,7 +18,7 @@
         name="tweet"
         id="tweet"
         cols="40"
-        rows="4"
+        rows="2"
       ></textarea>
     </div>
   </form>
