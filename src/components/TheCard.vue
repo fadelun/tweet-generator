@@ -1,5 +1,5 @@
 <template>
-  <div class="card bg-white w-[450px] min-h-[240px] border p-6 rounded-2xl">
+  <div class="card bg-white w-[650px] min-h-[300px] border p-8 rounded-2xl">
     <div class="card-profile w-full flex items-center gap-x-2 mb-4">
       <ProfileImage />
       <UserName />

@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer components {
+  html {
+    font-family: Inter, Arial, sans-serif;
+  }
   body {
     @apply max-w-full h-screen bg-blue-200 flex items-center justify-center;
   }

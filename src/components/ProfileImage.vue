@@ -1,6 +1,6 @@
 <template>
   <img
-    class="block mx-auto w-12 h-12 rounded-full sm:mx-0 sm:shrink-0"
+    class="block mx-auto w-20 h-20 rounded-full sm:mx-0 sm:shrink-0"
     src="https://fakeimg.pl/300/"
     alt="user image"
   />

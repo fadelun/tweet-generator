@@ -1,10 +1,10 @@
 <template>
   <div class="twitter-quote mb-3">
-    <h2 class="text-2xl font-semibold">
+    <h2 class="text-3xl font-semibold">
       {{
         user.tweet
           ? user.tweet
-          : "Lorem Ipsum dolor sit amet. Aut entuter molestiae "
+          : "Here’s an idea 🤔 do something good for someone and don’t post about it on social media. "
       }}
     </h2>
   </div>

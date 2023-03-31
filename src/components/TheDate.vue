@@ -1,6 +1,9 @@
-<template lang="">
-  <div>
-    <h2 class="text-sm font-medium text-slate-400">8.30 PM . Nov 5, 2022</h2>
+<template>
+  <div class="twitter-date w-full">
+    <p class="text-base font-medium">
+      <span class="text-slate-400">12:30 PM · Apr 21, 2021 ·</span>
+      <span class="text-blue-400"> Twitter Web App</span>
+    </p>
   </div>
 </template>
 <script></script>
