@@ -1,5 +1,7 @@
 <template>
-  <div class="card bg-white w-[650px] min-h-[300px] border p-8 rounded-2xl">
+  <section
+    class="twitter-card bg-white w-[650px] min-h-[300px] border p-8 rounded-2xl"
+  >
     <div class="card-profile w-full flex items-center gap-x-2 mb-4">
       <ProfileImage />
       <UserName />
@@ -8,7 +10,7 @@
       <TheQuote />
       <TheDate />
     </div>
-  </div>
+  </section>
 </template>
 <script setup>
 import ProfileImage from "./ProfileImage.vue";
