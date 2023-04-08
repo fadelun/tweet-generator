@@ -4,7 +4,12 @@
   >
     <div class="input-section mb-4 flex flex-col">
       <label for="uplaod-image">Upload image:</label>
-      <input type="file" id="uplaod-image" accept="image/jpg, image/png" />
+      <input
+        type="file"
+        id="uplaod-image"
+        accept="image/jpg, image/png"
+        v-on:change="uploadImage"
+      />
     </div>
     <div class="input-section mb-4 flex flex-col">
       <label for="name-input">Account name :</label>
@@ -32,13 +37,33 @@
   </form>
 </template>
 <script setup>
-import { inject, onMounted, onUnmounted } from "vue";
+import { inject, onMounted, onUpdated, getCurrentInstance } from "vue";
 import html2canvas from "html2canvas";
 
 const user = inject("user");
+
+const uploadImage = (e) => {
+  const file = e.target.files[0];
+  user.image = URL.createObjectURL(file);
+};
+
 onMounted(() => {
   const target = document.querySelector(".twitter-card");
   const button = document.querySelector(".btn-generate");
+
+  // uploadImage.addEventListener("change", () => {
+  // let reader = new FileReader();
+  // reader.readAsDataURL(uploadImage.files[0]);
+  // user.image = uploadImage.files[0];
+  // console.log(user.image);
+
+  // console.log(uploadImage.files[0]);
+
+  // const reader = new fileReader()
+  // reader.readAsDataURL(...files[0])
+  // reader.onload = () => {..}
+  // });
+
   const generateImage = (e) => {
     e.preventDefault();
     console.log("berhasil");
@@ -56,8 +81,4 @@ onMounted(() => {
 
   button.addEventListener("click", generateImage);
 });
-
-// onUnmounted(() => {
-//   anchor.remove();
-// });
 </script>
