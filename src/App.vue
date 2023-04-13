@@ -21,7 +21,7 @@ const timestanmp = computed(() => {
 </script>
 
 <template>
-  <div class="container mx-auto flex flex-col lg:flex-row xl:gap-x-52">
+  <div class="container mx-auto flex flex-col lg:flex-row xl:gap-x-24">
     <TheCard :user="user" :timestanmp="timestanmp" />
     <InputForm :user="user" />
   </div>
