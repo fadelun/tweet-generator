@@ -2,31 +2,23 @@
   <form class="bg-blue-300 lg:w-1/2 p-5 rounded-xl shadow-xl">
     <div class="input-section mb-4 flex flex-col">
       <label
-        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        class="block mb-2 text-lg font-semibold text-gray-900 dark:text-white"
         for="file_input"
-        >Upload image:</label
+        >Upload image</label
       >
       <input
         class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
         type="file"
         id="uplaod-image"
-        accept="image/jpg, image/png"
+        accept="image/*"
         v-on:change="uploadImage"
       />
-      <!-- 
-      <label for="uplaod-image">Upload image:</label>
-      <input
-        type="file"
-        id="uplaod-image"
-        accept="image/jpg, image/png"
-        v-on:change="uploadImage"
-      /> -->
     </div>
     <div class="input-section mb-4 flex flex-col">
       <label
         for="name-input"
-        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-        >Account name:</label
+        class="block mb-2 text-lg font-semibold text-gray-900 dark:text-white"
+        >Account name</label
       >
       <input
         type="text"
@@ -41,7 +33,7 @@
     <div class="input-section mb-4 flex flex-col">
       <label
         for="username-input"
-        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        class="block mb-2 text-lg font-semibold text-gray-900 dark:text-white"
         >Username</label
       >
       <div class="flex">
@@ -61,7 +53,7 @@
     <div class="input-section flex flex-col mb-4">
       <label
         for="tweet"
-        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        class="block mb-2 text-lg font-semibold text-gray-900 dark:text-white"
         >Your tweet</label
       >
       <textarea
@@ -87,7 +79,7 @@
     </div> -->
     <div class="input-section flex flex-col mb-4">
       <ul
-        class="items-center w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+        class="items-center w-full text-lg font-semibold text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white"
       >
         <li
           v-for="(device, i) in devices"
@@ -105,14 +97,14 @@
 
             <label
               :for="`horizontal-list-${device}`"
-              class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+              class="w-full py-3 ml-2 text-md font-medium text-gray-900 dark:text-gray-300"
               >{{ device }}
             </label>
           </div>
         </li>
       </ul>
     </div>
-    <div class="input-section flex gap-2">
+    <div class="input-section flex items-center gap-2 mb-4">
       <input type="checkbox" id="checkbox" v-model="user.verified" />
       <label for="checkbox">Verified account</label>
     </div>

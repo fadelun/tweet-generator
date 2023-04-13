@@ -2,19 +2,27 @@
 import InputForm from "./components/InputForm.vue";
 import TheCard from "./components/TheCard.vue";
 
-import { reactive, provide } from "vue";
+import { computed, reactive } from "vue";
+import moment from "moment"; //library date time
 
 const user = reactive({
   name: "",
   username: "",
   tweet: "",
   image: "",
+  device: "",
+  verified: true,
 });
 
-provide("user", user);
+const date = new Date();
+const timestanmp = computed(() => {
+  return moment(date).format("h:mm A · MMM DD, YYYY ·");
+});
 </script>
 
 <template>
-  <TheCard />
-  <InputForm />
+  <div class="container mx-auto flex flex-col lg:flex-row xl:gap-x-52">
+    <TheCard :user="user" :timestanmp="timestanmp" />
+    <InputForm :user="user" />
+  </div>
 </template>
