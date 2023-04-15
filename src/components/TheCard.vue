@@ -3,29 +3,26 @@
     class="preview grid items-center lg:w-1/2 aspect-square p-4 sm:p-10 md:p-12 bg-white shadow-xl"
   >
     <section class="twitter-card w-full p-8">
-      <div class="card-profile w-full flex items-center gap-x-4 mb-4">
+      <div class="card-profile w-full flex gap-x-2 md:gap-x-4 mb-4">
         <img
           id="profile-image"
-          class="block mx-auto w-12 h-12 sm:w-20 sm:h-20 rounded-full sm:mx-0 sm:shrink-0"
-          :src="`${user.image ? user.image : 'https://fakeimg.pl/300/'}`"
+          class="block mx-auto w-12 h-12 object-cover sm:w-20 sm:h-20 rounded-[50%] md:rounded-full sm:mx-0 sm:shrink-0 bg-slate-300"
+          :src="`${user.image ? user.image : fakeImage}`"
           alt="user image"
         />
+
         <div class="card-names w-full">
-          <h2
-            class="text-lg sm:text-2xl font-bold leading-tight flex gap-1 items-center"
-          >
+          <h2 class="text-lg sm:text-2xl font-bold flex gap-1 items-center">
             <span> {{ user.name ? user.name : "Account name" }}</span
-            ><span
+            ><span class="relative w-8"
               ><img
                 v-if="user.verified"
                 :src="verified"
                 alt="verified image"
-                class="w-[40%] sm:w-[60%] md:w-[70%]"
+                class="w-[40%] sm:w-[60%] md:w-[70%] absolute"
             /></span>
           </h2>
-          <h2
-            class="font-normal text-sm sm:text-xl text-slate-400 leading-tight"
-          >
+          <h2 class="font-normal text-sm sm:text-xl text-slate-400">
             {{ user.username ? `@${user.username}` : "@username" }}
           </h2>
         </div>
@@ -52,5 +49,6 @@
 </template>
 <script setup>
 import verified from "../assets/verified.svg";
+import fakeImage from "../assets/fake-image.png";
 const props = defineProps(["user", "timestanmp"]);
 </script>

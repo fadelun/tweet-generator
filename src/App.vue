@@ -26,3 +26,10 @@ const timestanmp = computed(() => {
     <InputForm :user="user" />
   </div>
 </template>
+
+<!-- problem
+  - gambar profile tidak object fit
+  - nama akun dan username pindah posisi 
+
+
+-->

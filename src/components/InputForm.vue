@@ -148,10 +148,13 @@ onMounted(() => {
     e.preventDefault();
     console.log("berhasil");
     html2canvas(target).then((canvas) => {
-      const base64image = canvas.toDataURL("image/jpg");
+      const base64image = canvas.toDataURL("image/png");
       let anchor = document.createElement("a");
+      // const create = document.createElement("section");
+      // create.innerHTML = base64image;
+
       anchor.setAttribute("href", base64image);
-      anchor.setAttribute("download", "my-tweet.jpg");
+      anchor.setAttribute("download", "my-tweet.png");
 
       anchor.click();
       anchor.remove();
