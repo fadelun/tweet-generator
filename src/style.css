@@ -5,13 +5,10 @@
 @tailwind utilities;
 
 @layer components {
-  html {
-    font-family: Inter, Arial, sans-serif;
-  }
+  /* html {
+    font-family: "Times new roman", Arial, sans-serif;
+  } */
   body {
     @apply h-screen bg-slate-300 grid items-center;
   }
-  /* label {
-    @apply text-xl;
-  } */
 }

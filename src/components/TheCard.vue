@@ -13,14 +13,16 @@
 
         <div class="card-names w-full">
           <h2 class="text-lg sm:text-2xl font-bold flex gap-1 items-center">
-            <span> {{ user.name ? user.name : "Account name" }}</span
-            ><span class="relative w-8"
-              ><img
-                v-if="user.verified"
-                :src="verified"
-                alt="verified image"
-                class="w-[40%] sm:w-[60%] md:w-[70%] absolute"
-            /></span>
+            {{ user.name ? user.name : "Account name" }}
+            <img
+              v-if="user.verified"
+              :src="verified"
+              alt="verified image"
+              class="w-7"
+            />
+            <!-- <span class="relative w-8"
+              class="w-[40%] sm:w-[60%] md:w-[70%]"
+              ></span> -->
           </h2>
           <h2 class="font-normal text-sm sm:text-xl text-slate-400">
             {{ user.username ? `@${user.username}` : "@username" }}

@@ -118,11 +118,10 @@
   </form>
 </template>
 <script setup>
-import { ref, onMounted } from "vue";
+import { onMounted } from "vue";
 import html2canvas from "html2canvas";
 
 const props = defineProps(["user", "timestanmp"]);
-// const deviceSet = ref("");
 
 const devices = [
   "Twitter Web App",
@@ -130,10 +129,6 @@ const devices = [
   "Twitter for Android",
   "kosong",
 ];
-
-// const handle = () => {
-
-// }
 
 const uploadImage = (e) => {
   const file = e.target.files[0];
@@ -147,14 +142,17 @@ onMounted(() => {
   const generateImage = (e) => {
     e.preventDefault();
     console.log("berhasil");
-    html2canvas(target).then((canvas) => {
-      const base64image = canvas.toDataURL("image/png");
-      let anchor = document.createElement("a");
-      // const create = document.createElement("section");
-      // create.innerHTML = base64image;
 
-      anchor.setAttribute("href", base64image);
-      anchor.setAttribute("download", "my-tweet.png");
+    html2canvas(target).then((canvas) => {
+      document.querySelector(".output").appendChild(canvas);
+      console.log(canvas);
+      const base64image = canvas.toDataURL("image/jpg");
+      let anchor = document.createElement("a");
+
+      anchor.href = base64image;
+      anchor.download = "my-tweet.jpg";
+      // anchor.setAttribute("href", base64image);
+      // anchor.setAttribute("download", "my-tweet.png");
 
       anchor.click();
       anchor.remove();

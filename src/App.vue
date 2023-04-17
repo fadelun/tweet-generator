@@ -24,11 +24,11 @@ const timestanmp = computed(() => {
   <div class="container mx-auto flex flex-col lg:flex-row xl:gap-x-24">
     <TheCard :user="user" :timestanmp="timestanmp" />
     <InputForm :user="user" />
+    <div class="output"></div>
   </div>
 </template>
 
 <!-- problem
-  - gambar profile tidak object fit
   - nama akun dan username pindah posisi 
 
 
