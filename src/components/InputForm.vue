@@ -4,7 +4,7 @@
       <label
         class="block mb-2 text-lg font-semibold text-gray-900 dark:text-white"
         for="file_input"
-        >Upload image</label
+        >user image</label
       >
       <input
         class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
@@ -18,7 +18,7 @@
       <label
         for="name-input"
         class="block mb-2 text-lg font-semibold text-gray-900 dark:text-white"
-        >Account name</label
+        >Name</label
       >
       <input
         type="text"
@@ -27,8 +27,6 @@
         v-model="user.name"
         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
       />
-      <!-- <label for="name-input">Account name :</label>
-      <input type="text" name="account-name" v-model="user.name" /> -->
     </div>
     <div class="input-section mb-4 flex flex-col">
       <label
@@ -106,14 +104,15 @@
     </div>
     <div class="input-section flex items-center gap-2 mb-4">
       <input type="checkbox" id="checkbox" v-model="user.verified" />
-      <label for="checkbox">Verified account</label>
+      <label for="checkbox">Verified user</label>
     </div>
 
     <button
       type="button"
       class="btn-generate text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+      @click="$emit('modalEvent')"
     >
-      SUBMIT
+      Preview
     </button>
   </form>
 </template>
@@ -141,21 +140,14 @@ onMounted(() => {
 
   const generateImage = (e) => {
     e.preventDefault();
-    console.log("berhasil");
 
     html2canvas(target).then((canvas) => {
-      document.querySelector(".output").appendChild(canvas);
-      console.log(canvas);
+      canvas.style.width = "100%";
+      canvas.style.height = "100%";
       const base64image = canvas.toDataURL("image/jpg");
-      let anchor = document.createElement("a");
+      document.querySelector("#output-preview").appendChild(canvas);
 
-      anchor.href = base64image;
-      anchor.download = "my-tweet.jpg";
-      // anchor.setAttribute("href", base64image);
-      // anchor.setAttribute("download", "my-tweet.png");
-
-      anchor.click();
-      anchor.remove();
+      props.user.url = base64image;
     });
   };
 

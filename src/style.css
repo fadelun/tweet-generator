@@ -5,10 +5,16 @@
 @tailwind utilities;
 
 @layer components {
-  /* html {
-    font-family: "Times new roman", Arial, sans-serif;
-  } */
+  * {
+    box-sizing: border-box;
+  }
+  html {
+    font-family: "Times new roman", Arial, sans-serif; /* this font is useless when generating image*/
+  }
   body {
     @apply h-screen bg-slate-300 grid items-center;
   }
+  /* #modal-root {
+    @apply ;
+  } */
 }
