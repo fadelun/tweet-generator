@@ -3,13 +3,18 @@
     class="preview grid items-center lg:w-1/2 aspect-square p-4 sm:p-10 md:p-12 bg-white shadow-xl absolute top-[-100rem]"
   >
     <section class="twitter-card w-full p-8">
-      <div class="card-profile w-full flex gap-x-2 md:gap-x-4 mb-4">
-        <img
-          id="profile-image"
-          class="block mx-auto w-12 h-12 object-cover sm:w-20 sm:h-20 rounded-[50%] md:rounded-full sm:mx-0 sm:shrink-0 bg-slate-300"
-          :src="`${user.image ? user.image : fakeImage}`"
-          alt="user image"
-        />
+      <div class="card-profile w-full flex gap-x-2 sm:gap-x-4 mb-4">
+        <div
+          class="image-contain block mx-auto w-12 h-12 sm:w-20 sm:h-20 sm:mx-0 shrink-0"
+        >
+          <img
+            id="profile-image"
+            class="align-middle rounded-full w-12 h-12 sm:w-20 sm:h-20"
+            :src="`${user.image ? user.image : fakeImage}`"
+            alt="user image"
+          />
+          <!-- fit object tidak support di html2canvas -->
+        </div>
 
         <div class="card-names w-full">
           <h2 class="text-lg sm:text-2xl font-bold flex gap-1 items-center">
@@ -34,7 +39,7 @@
             {{
               user.tweet
                 ? user.tweet
-                : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam totam inventore veritatis, minus repellat fuga vel nostrum assumenda sint alias neque nobis quia voluptate delectus, eaque iste architecto, pariatur consequatur."
+                : "Lorem ipsum dolor sit amet consectetur adipisicing elit. "
             }}
           </h2>
         </div>

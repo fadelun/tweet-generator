@@ -17,7 +17,7 @@
     <a
       :href="user.url"
       download="my-tweet.jpg"
-      class="btn-dowload px-6 py-2 text-base md:px-10 md:py-3 rounded-md md:text-xl font-medium text-white bg-blue-500"
+      class="btn-dowload px-6 py-2 text-base md:px-10 md:py-3 rounded-md md:text-xl font-medium text-white bg-blue-600 hover:bg-blue-800"
     >
       Download
     </a>

@@ -7,12 +7,13 @@
 @layer components {
   * {
     box-sizing: border-box;
+    @apply text-xs sm:text-sm md:text-xl;
   }
   html {
-    font-family: "Times new roman", Arial, sans-serif; /* this font is useless when generating image*/
+    font-family: Rubik, Arial, sans-serif; /* this font is useless when generating image*/
   }
   body {
-    @apply h-screen bg-slate-300 grid items-center;
+    @apply h-screen bg-amber-200 grid items-center;
   }
   /* #modal-root {
     @apply ;
