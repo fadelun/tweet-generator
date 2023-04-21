@@ -1,5 +1,5 @@
 <template>
-  <form class="bg-white lg:w-1/2 p-5 rounded-xl shadow-xl">
+  <form class="bg-white w-4/5 lg:w-1/2 p-5 rounded-xl shadow-xl">
     <div class="input-section mb-4 flex flex-col">
       <label
         class="block mb-2 text-lg font-semibold text-gray-900 dark:text-white"

@@ -1,6 +1,6 @@
 <template>
   <section
-    class="preview grid items-center lg:w-1/2 aspect-square p-4 sm:p-10 md:p-12 bg-white shadow-xl absolute top-[-100rem]"
+    class="preview grid items-center w-4/5 lg:w-1/2 aspect-square p-4 sm:p-10 md:p-12 bg-white shadow-xl absolute top-[-100rem]"
   >
     <section class="twitter-card w-full p-8">
       <div class="card-profile w-full flex gap-x-2 sm:gap-x-4 mb-4">
@@ -25,7 +25,7 @@
                 v-if="user.verified"
                 :src="verified"
                 alt="verified image"
-                class="w-[40%] sm:w-[60%] md:w-[70%] absolute -bottom-4 lg:-bottom-5"
+                class="w-[40%] sm:w-[60%] md:w-[70%] absolute -bottom-3 lg:-bottom-5"
             /></span>
           </h2>
           <h2 class="font-normal text-sm sm:text-xl text-slate-400">
