@@ -25,7 +25,7 @@
                 v-if="user.verified"
                 :src="verified"
                 alt="verified image"
-                class="w-[40%] sm:w-[60%] md:w-[70%] absolute -bottom-4 lg:-bottom-6"
+                class="w-[40%] sm:w-[60%] md:w-[70%] absolute -bottom-4 lg:-bottom-5"
             /></span>
           </h2>
           <h2 class="font-normal text-sm sm:text-xl text-slate-400">
@@ -36,11 +36,7 @@
       <div class="card-content">
         <div class="twitter-quote mb-3">
           <h2 class="text-xl sm:text-3xl font-normal">
-            {{
-              user.tweet
-                ? user.tweet
-                : "Lorem ipsum dolor sit amet consectetur adipisicing elit. "
-            }}
+            {{ user.tweet ? user.tweet : "Leave a tweet" }}
           </h2>
         </div>
         <div class="twitter-date w-full">
